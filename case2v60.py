@@ -392,10 +392,10 @@ st.write(
 )
 
 st.write(
-'Het enige vervelende hieraan is dat wanneer je dataset uit meerdere bladzijdes bestaat komt er een limiet op te staan. ' 
-'Wanneer je dan de .json file wilt, krijg je alleen de gegevens tot die limiet. De limiet staat op 30, dit betekent dan ook ' 
+'LEt wel op! Wanneer de dataset uit meerdere bladzijdes bestaat komt er een limiet op te staan. ' 
+'Wanneer je dan die specifieke .json file wilt, krijg je alleen de gegevens tot die limiet. De limiet staat op 30, dit betekent dan ook ' 
 'dat je maar 30 resultaten krijgt. '
-'De aanpassing hiervoor is kijken naar hoeveel resultaten de dataset heeft in totaal en dit aanpassen in de url. '
+'Om dit aan te passen moet je kijken naar hoeveel resultaten de dataset heeft in totaal en dit aanpassen in de url. '
 'In ons geval had de dataset "results" in het seizoen 2021 440 resultaten en hebben de url als volgt op deze manier aangepast:'
 'https://ergast.com/api/f1/2021/1/results?limit=440. Dit overschrijft het standaard limiet en wordt het mogelijk om er een json file van de te maken.'
 )
