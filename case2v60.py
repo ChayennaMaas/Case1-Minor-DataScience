@@ -350,27 +350,28 @@ st.image('https://gadgetgekkie.bladecdn.net/wp-content/uploads/2021/07/F1-2021-1
 
 
 st.write(
-'Welkom op op onze blog! Op deze pagina zal er een korte analyse worden gedaan ' 
+'Welkom op op onze blog! Op deze pagina wordt er een korte analyse worden gedaan ' 
 'over de verkregen resultaten van het afgelopen seizoen van de formule 1!'
 )
 
 st.write(
-'In deze blog wordt uitgelegd waar verkregen dataset waarmee is gewerkt vandaan komt. '
+'Op deze blog wordt uitgelegd waar de verkregen dataset, waarmee gewerkt is, vandaan komt. '
 'Ook worden de resultaten per coureur en per team op iedere grandprix locatie met elkaar vergeleken.'
 )
 
 st.write(
-'In het kopje status wordt worden de gereden races verder onder de loop genomen, hierbij wordt voornamelijk '
-'besproken of de coureur is gefinished of dat de coureur bij een bepaalde race een ongeluk, pech enz. had, dit '
+'In het kopje status zijn de gereden races verder onder de loop genomen, hierbij wordt voornamelijk '
+'besproken of de coureur is gefinished of dat de coureur bij een bepaalde race een ongeluk, pech, gestopt enz. had, dit '
 'zal dan ook in de plot vallen onder "not finished". '
 'Ook worden de snelste laptijden per coureur per wedstrijd met elkaar vergeleken.'
 )
 
 st.write(
-'Als laatst hebben we een dataframe gemaakt om de begin(grid) posities en eindposities met elkaar te vergelijken, om '
+'Als laatst hebben we een dataframe gemaakt om de begin (grid) posities en eind posities met elkaar te vergelijken, om '
 'zo in te zien welke driver het meest is geklommen of juist is gezakt in positie. '
-'Daarbij zullen alle gemaakt plots interactief zijn en kunnen worden aangepast door de lezer zelf, fijn lees plezier!'
+'Daarbij zullen alle gemaakt plots interactief zijn en kunnen door de lezer zelf worden aangepast.'
 )
+st.write('Fijn lees plezier')
 
 
 # In[32]:
@@ -392,8 +393,8 @@ st.write(
 )
 
 st.write(
-'LEt wel op! Wanneer de dataset uit meerdere bladzijdes bestaat komt er een limiet op te staan. ' 
-'Wanneer je dan die specifieke .json file wilt, krijg je alleen de gegevens tot die limiet. De limiet staat op 30, dit betekent dan ook ' 
+'Let wel op! Wanneer de dataset uit meerdere bladzijdes bestaat, wordt er een bepaald limiet op de dataset gezet. ' 
+'Wanneer je dan een specifieke .json file wilt, krijg je alleen de gegevens tot die limiet. De limiet staat standaard op 30, dit betekent dan ook ' 
 'dat je maar 30 resultaten krijgt. '
 'Om dit aan te passen moet je kijken naar hoeveel resultaten de dataset heeft in totaal en dit aanpassen in de url. '
 'In ons geval had de dataset "results" in het seizoen 2021 440 resultaten en hebben de url als volgt op deze manier aangepast:'
