@@ -392,10 +392,10 @@ st.write(
 )
 
 st.write(
-'Het enige vervelende hieraan is dat wanneer je dataset uit meerdere bladzijdes bestaat komt er een limiet op te staan, wanneer '
-'je dan de .json file wilt krijg je alleen de gegevens tot die limiet. De limiet staat op 30, dit betekent dat je maar 30 resultaten. '
-'krijgt. '
-'De aanpassing die je dan moet doen is kijken naar hoeveel resultaten de dataset heeft in totaal en dit aanpassen in de url. '
+'Het enige vervelende hieraan is dat wanneer je dataset uit meerdere bladzijdes bestaat komt er een limiet op te staan. ' 
+'Wanneer je dan de .json file wilt, krijg je alleen de gegevens tot die limiet. De limiet staat op 30, dit betekent dan ook ' 
+'dat je maar 30 resultaten krijgt. '
+'De aanpassing hiervoor is kijken naar hoeveel resultaten de dataset heeft in totaal en dit aanpassen in de url. '
 'In ons geval had de dataset "results" in het seizoen 2021 440 resultaten en hebben de url als volgt op deze manier aangepast:'
 'https://ergast.com/api/f1/2021/1/results?limit=440. Dit overschrijft het standaard limiet en wordt het mogelijk om er een json file van de te maken.'
 )
@@ -514,7 +514,7 @@ query = f"Constructor=='{Constructor}'"
 
 df_filtered = driver_standings.query(query)
 fig= px.line(df_filtered, x='location', y='points', color='surname',  symbol='Constructor', 
-             title='<b>Overzicht punten per team<b>', height=800, width=850)
+             title='<b>Overzicht punten per team<b>', height=800, width=900)
 
 fig.update_xaxes(tickangle=45)
 fig.update_layout(xaxis_title='', yaxis_title='Punten', legend_title_text='Driver & Constructor')
