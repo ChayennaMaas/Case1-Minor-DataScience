@@ -336,7 +336,7 @@ st.title('Overzicht formule 1 seizoen: 2021 ')
 
 
 st.write(
-'Auteurs: Anna de Geeter, Daan Handgraaf, Chayenna Maas, Iris van de Velde'
+'Auteurs:  Anna de Geeter, Daan Handgraaf, Chayenna Maas, Iris van de Velde'
 )
 
 
@@ -371,7 +371,7 @@ st.write(
 'zo in te zien welke driver het meest is geklommen of juist is gezakt in positie. '
 'Daarbij zullen alle gemaakt plots interactief zijn en kunnen door de lezer zelf worden aangepast.'
 )
-st.write('Fijn lees plezier')
+st.write('Fijn lees plezier!')
 
 
 # In[32]:
