@@ -448,7 +448,7 @@ st.code(code6)
 
 
 driverstandings_sep=driver_standings.drop(labels=['name', 'DoB', 'nationality', 'time [ms]', 'time', 'fastest lap rank', 'fastest lap avr.speed'], axis=1)
-st.dataframe(driverstandings_sep, width=1200)
+st.dataframe(driverstandings_sep, width=1200, height=700)
 
 
 # In[38]:
