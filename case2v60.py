@@ -350,8 +350,8 @@ st.image('https://gadgetgekkie.bladecdn.net/wp-content/uploads/2021/07/F1-2021-1
 
 
 st.write(
-'Welkom op op onze blog! Op deze pagina wordt er een korte analyse worden gedaan ' 
-'over de verkregen resultaten van het afgelopen seizoen van de formule 1!'
+'Welkom op op onze blog! Op deze pagina wordt er een korte analyse gedaan ' 
+'over de verkregen resultaten van het afgelopen formule 1 seizoen!'
 )
 
 st.write(
