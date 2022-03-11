@@ -386,24 +386,19 @@ st.header('Verkregen dataset')
 st.write(
 'De dataset, die is gebruikt voor de analyses komt van de Ergast Developer API (http://ergast.com/mrd/). '
 'Om uiteindelijk bij de gewenste dataset te komen heb je de volgende url nodig: '
-'http[s]://ergast.com/api/<series>/<season>/<round>/... '
-'Waarbij op de plek van series "F1" komt te staan, op de plek van "season" kan je selecteren welk jaar je wilt '
-'en op de plek van "round" kun je specificeren welke race je wilt bekijken. Als laatste kun je op de plek van de puntjes '
-'specificeren welke data je wilt, in ons geval willen wij daar "results" hebben.'
+'https://ergast.com/api/<series>/<season>/<round>/... '
+'Waarbij op de plek van series "F1" komt te staan, op de plek van <season> kan je selecteren welk jaar je wilt '
+'en op de plek van <round> kun je specificeren welke race je wilt bekijken, dit wilt zeggen dat https://ergast.com/api/f1/2021/1/results '
+'de resultaten bevatten van de grand prix in Sakhir.'
 )
 
 st.write(
-'Let wel op! Wanneer de dataset uit meerdere bladzijdes bestaat, wordt er een bepaald limiet op de dataset gezet. ' 
-'Wanneer je dan een specifieke .json file wilt, krijg je alleen de gegevens tot die limiet. De limiet staat standaard op 30, dit betekent dan ook ' 
-'dat je maar 30 resultaten krijgt. '
-'Om dit aan te passen moet je kijken naar hoeveel resultaten de dataset heeft in totaal en dit aanpassen in de url. '
-'In ons geval had de dataset "results" in het seizoen 2021 440 resultaten en hebben de url als volgt op deze manier aangepast:'
-'https://ergast.com/api/f1/2021/1/results?limit=440. Dit overschrijft het standaard limiet en wordt het mogelijk om er een json file van de te maken.'
+'Om vervolgens het .json file te krijgen kan er simpel .json achter de url worden geplakt om zo deze te gebruiken in jouw data analyse.'  
 )
-
 st.write(
-'Om het .json file te krijgen kan er simpel .json achter de url worden geplakt om zo deze te gebruiken in jouw data analyse. '
-'Pas wel op dat wanneer je in je url "?limit=<getal>" hebt staan dat de .json hier nog voor moet.'    
+'Doordat wij geïnteresserd zijn in de resultaten van alle gereden grands prix in het seizoen van 2021, hebben we dan ook ' 
+'de json files van alle wedstrijden in 2021 gecombineerd tot een dataset. Dit kon makkelijk gedaan worden door in de url '
+' de <round> telkens aan te passen.'
 )
 
 st.write(
@@ -418,7 +413,7 @@ st.write(
 
 code=''' 
 #Verkregen dataset
-url='https://ergast.com/api/f1/2021/1/results.json?limit=440'
+url='https://ergast.com/api/f1/2021/1/results.json'
 driver_standings= requests.get(url).json()
 
 #Omzetten naar een dataframe
