@@ -384,12 +384,12 @@ st.header('Verkregen dataset')
 
 
 st.write(
-'De dataset, die is gebruikt voor de analyses komt van de Ergast Developer API (http://ergast.com/mrd/). '
-'Om uiteindelijk bij de gewenste dataset te komen heb je de volgende url nodig: '
+'De dataset die gebruikt is voor de analyses komt van de Ergast Developer API (http://ergast.com/mrd/). '
+'Om uiteindelijk bij de gewenste dataset te komen heb je de volgende url specificatie nodig: '
 'https://ergast.com/api/<series>/<season>/<round>/... '
-'Waarbij op de plek van series "F1" komt te staan, op de plek van <season> kan je selecteren welk jaar je wilt '
+'Waarbij op de plek van <series> "F1" komt te staan, op de plek van <season> kan je selecteren welk jaar/seizoen je wilt '
 'en op de plek van <round> kun je specificeren welke race je wilt bekijken, dit wilt zeggen dat https://ergast.com/api/f1/2021/1/results '
-'de resultaten bevatten van de grand prix in Sakhir.'
+'de resultaten bevatten van de grand prix in Sakhir in 2021.'
 )
 
 st.write(
@@ -397,16 +397,11 @@ st.write(
 )
 st.write(
 'Doordat wij geïnteresserd zijn in de resultaten van alle gereden grands prix in het seizoen van 2021, hebben we dan ook ' 
-'de json files van alle wedstrijden in 2021 gecombineerd tot een dataset. Dit kon makkelijk gedaan worden door in de url '
+'de json files van alle wedstrijden in 2021 gecombineerd tot een pandas dataframe. Dit kon makkelijk gedaan worden door in de url '
 ' de <round> telkens aan te passen.'
 )
-
 st.write(
-'Het json file bestond uit een dataset waarbij veel in elkaar gestopte libraries voorkwamen, dit moest daarom ook ' 
-'eerst goed worden gezet voordat de gewenste dataframe tevoorschijn kwam. '
-'Dit kon bereikt worden door de pd.json_normalize te gebruiken en daarbij het gewenste record_path te specificeren. '
-)
-
+'In de hieronder weergegeven code staat nog verder gespecificeerd hoe wij onze dataset hebben verkregen.')
 
 # In[34]:
 
@@ -422,14 +417,13 @@ driver_standings=pd.json_normalize(driver_standings_list, record_path='Results')
 '''
 st.code(code)
 
-
 # In[35]:
-
 
 st.write(
 'Om de dataset klaar te stomen voor gebruik zijn de kolommen die niet zijn ' 
 'gebruikt weggelaten en zijn er enkele kolommen hernoemt om deze in het '
-'latere stadia beter te erkennen en te gebruiken voor de hier op volgende plots.')
+'latere stadia beter te erkennen en te gebruiken voor de hier op volgende plots. '
+'Deze aanpassingen hebben er ook meteen voor gezorgd dat enkele NaN waardes niet werden meegenomen.')
 
 
 # In[36]:
